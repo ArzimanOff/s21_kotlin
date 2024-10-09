@@ -1,4 +1,4 @@
-package t06
+package day01.t06
 
 fun main() {
     while (true) {

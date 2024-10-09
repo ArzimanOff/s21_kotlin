@@ -1,4 +1,4 @@
-package t02
+package day01.t02
 
 
 fun main() {

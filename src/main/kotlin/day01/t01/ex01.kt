@@ -1,4 +1,4 @@
-package t01
+package day01.t01
 
 import java.lang.Exception
 import kotlin.math.abs

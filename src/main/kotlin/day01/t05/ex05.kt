@@ -1,4 +1,4 @@
-package t04
+package day01.t05
 fun main() {
     while (true) {
         val size = getSize()
@@ -6,11 +6,11 @@ fun main() {
 
         val numbers = getNumbers(size) ?: continue
 
-        val negativeAverage = calculateAverageOfNegatives(numbers)
-        if (negativeAverage == null) {
-            println("There are no negative elements")
+        val needNums = findNeedNums(numbers)
+        if (needNums.isEmpty()) {
+            println("There are no such elements")
         } else {
-            println(negativeAverage)
+            println(needNums)
         }
     }
 }
@@ -51,15 +51,15 @@ fun getNumbers(size: Int): List<Int>? {
     return numbers
 }
 
-fun calculateAverageOfNegatives(numbers: List<Int>): Double? {
-    val negativeNumbers = numbers.filter { it < 0 }
-    return if (negativeNumbers.isNotEmpty()) {
-        negativeNumbers.average()
-    } else {
-        null
+fun findNeedNums(numbers: List<Int>): List<Int>{
+    val res = numbers.filter {
+        it.toString()[0] == it.toString()[it.toString().length-1]
     }
+    return res
 }
 
 fun printError(){
     println("Couldn't parse a number. Please, try again")
 }
+
+

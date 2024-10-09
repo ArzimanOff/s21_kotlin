@@ -1,4 +1,4 @@
-package t08
+package day01.t08
 
 fun main() {
     var previousNumber: Int? = null

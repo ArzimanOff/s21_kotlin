@@ -1,4 +1,4 @@
-package t07
+package day01.t07
 
 import java.io.File
 import java.io.IOException

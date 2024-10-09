@@ -1,4 +1,4 @@
-package t03
+package day01.t03
 
 import java.math.BigInteger
 
